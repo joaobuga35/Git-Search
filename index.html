@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/globalStyles.css" />
+    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/inputAndButton.css">
+    <title>Git Search</title>
+  </head>
+  <body>
+    <main class="container prop-main">
+      <section class="git-search">
+        <div class="div-description-login">
+          <h1>Git Search</h1>
+          <p>Encontre e se conecte com profissionais de forma rápida e fácil </p>
+
+          <div class="div-img">
+            <span>Achados recentemente:</span>
+            <ul class="list-profile-add">
+              <li>
+                <img class="img-profile-add" src="./assets/img/Ellipse 3.svg" alt="">
+              </li>
+
+              <li>
+                <img class="img-profile-add" src="./assets/img/Ellipse 3.svg" alt="">
+              </li>
+
+              <li>
+                <img class="img-profile-add" src="./assets/img/Ellipse 3.svg" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="find-user">
+        <div class="div-user">
+          <h2>Procurar por um usuário</h2>
+
+          <form>
+            <label>Usuário github</label>
+            <input class="user" type="text" name="userGit" id="userGit" placeholder="Digite um usuário do github aqui...">
+            <span class="user-not-found hide">Usuario não encontrado</span>
+            <button class="button-disabled" type="submit">Ver perfil do github</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="./homeJs/home.js"></script>
+  </body>
+</html>
