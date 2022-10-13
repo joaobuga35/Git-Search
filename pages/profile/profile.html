@@ -6,26 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styleProfile.css/globalStylesProfile.css" />
     <link rel="stylesheet" href="./styleProfile.css/navBar.css">
+    <link rel="stylesheet" href="./styleProfile.css/buttons.css">
+    <link rel="stylesheet" href="./styleProfile.css/listRepositories.css">
     
     <title>Nome do usuário Github</title>
   </head>
   <body>
     <main class="container">
       <header>
-        <div class="head-profile">
-          <img src="/assets/img/imgProfile.svg" alt="">
-          <div class="profile-description">
-            <h2>Samuel Leão</h2>
-            <span>UI developer</span>
-          </div>
-        </div>
-
-        <div class="btn-head">
+        <div class="div-btn-head">
           <button class="btn-email">E-mail</button>
-          <button class="btn-redirected"><a href="/index.html">Trocar de usuário</a></button>
+          <button class="btn-redirected"><a class="page-login-redirected" href="/index.html">Trocar de usuário</a></button>
         </div>
       </header>
+
+      <ul id="list-projects">
+      </ul>
     </main>
-    <script src="index.js"></script>
+    <script src="/scripts/api.js"></script>
+    <script src="/scripts/render.js"></script>
   </body>
 </html>

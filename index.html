@@ -39,15 +39,17 @@
         <div class="div-user">
           <h2>Procurar por um usuário</h2>
 
-          <form>
+          <form id="form">
             <label>Usuário github</label>
             <input class="user" type="text" name="userGit" id="userGit" placeholder="Digite um usuário do github aqui...">
             <span class="user-not-found hide">Usuario não encontrado</span>
-            <button class="button-disabled" type="submit">Ver perfil do github</button>
+            <button id="btn-submit" class="button-disabled" type="submit">Ver perfil do github</button>
           </form>
         </div>
       </section>
     </main>
-    <script src="./homeJs/home.js"></script>
+    <script src="/scripts/api.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/render.js"></script>
   </body>
 </html>
