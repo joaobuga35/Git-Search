@@ -1,5 +1,6 @@
 const form = document.getElementById('form')
 const input = document.getElementById('userGit')
+const objectsProfile = []
 input.addEventListener('keyup',() => {
     if (input.value != "") {
         document.querySelector('#btn-submit').classList.add('button-active')
@@ -15,11 +16,16 @@ async function genericForm(){
     
         const valueAPI = await profileAPI(nameUser)
         console.log(valueAPI)
+        objectsProfile.push(valueAPI.avatar_url)
+        console.log(objectsProfile)
         const stringTransform = JSON.stringify(valueAPI)
-        
         if (!valueAPI.message) {
             localStorage.setItem('renderdados',stringTransform)
         }
     })
 }
 genericForm()
+
+// function renderImgProfile() {
+    
+// }
