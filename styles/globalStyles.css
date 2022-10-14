@@ -45,8 +45,19 @@ body {
   background-color: var(--color-black);
   color: var(--color-grey-7);
   font-family: var(--font-family);
+  transition: 0.8s ease;
+  animation: smoothShow 800ms;
 }
 
 ul {
   list-style: none;
+}
+
+@keyframes smoothShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
