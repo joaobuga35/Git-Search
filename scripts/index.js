@@ -1,6 +1,13 @@
 const form = document.getElementById('form')
 const input = document.getElementById('userGit')
-const objectsProfile = []
+const datasUser = localStorage.getItem('@renderimg')
+const newDatasUser = JSON.parse(datasUser)
+let objectsProfile = []
+if (JSON.parse(datasUser)) {
+    objectsProfile = JSON.parse(datasUser)
+}
+
+
 input.addEventListener('keyup',() => {
     if (input.value != "") {
         document.querySelector('#btn-submit').classList.add('button-active')
@@ -31,13 +38,15 @@ async function genericForm(){
 
 genericForm()
 
-const datasUser = localStorage.getItem('@renderimg')
-const newDatasUser = JSON.parse(datasUser)
 
  function renderImgProfile(userProfile) {
     const listProfiles = document.querySelector('#list-profile-add')
+    const newArr = userProfile.reverse().filter((elem, index) => {
+        return index == 1 || index == 2 || index == 0
+    })
+    console.log(newArr)
 
-    userProfile.forEach(element => {
+    newArr.forEach(element => {
         const li = document.createElement('li')
         const img = document.createElement('img')
 
